@@ -40,7 +40,11 @@ Author: James Rota
 #import pandas as pd
 
 from sklearn.metrics.pairwise import cosine_similarity
-import pandas as pd 
+from sklearn.feature_extraction.text import CountVectorizer
+import Functions
+import pandas as pd
+import numpy as np 
+import re
 
 #Filter Data
 headers = ['id', 'song', 'artist', 'position', 'genre']
@@ -51,7 +55,43 @@ metadata = pd.read_csv("songs.csv", sep =';', header=0, names=headers)
 metadata = metadata.drop('id', axis=1)
 metadata = metadata.drop('position', axis=1)
 
-#print(metadata.head)
+#Normalize the data
+
+data = pd.DataFrame(metadata)
+
+# lower case only for all attributes
+data['song'] = data['song'].astype(str).str.lower()
+data['artist'] = data['artist'].astype(str).str.lower()
+data['genre'] = data['genre'].astype(str).str.lower()
+
+# Remove special characters
+
+data['song'] = data['song'].astype(str).str.replace(r'[^a-zA-Z0-9\s]', '', regex=True)
+data['artist'] = data['artist'].astype(str).str.replace(r'[^a-zA-Z0-9\s]', '', regex=True)
+data['genre'] = data['genre'].astype(str).str.replace(r'[^a-zA-Z0-9\s]', '', regex=True)
+
+print(data[:3])
+
+#MetaData format -> [song, artist, genre]
+
+data['artist_genre'] = data['artist'] + " " + data['genre']
+
+#Cosine Similarity 
+#note -> make this work for 2D Arrays
+
+vectorizer = CountVectorizer()
+
+
+
+    
+
+
+testProfile = ['The Killers rock']
+
+
+
+
+
 
 
 
