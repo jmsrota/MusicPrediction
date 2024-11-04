@@ -1,0 +1,66 @@
+/* Music Stuff */
+#music{
+    margin-top: 2%;
+    border-radius: 15px;
+    padding-left: 85px;
+}
+
+#searchButton{
+    color: lightblue;
+    background-color: #333;
+    margin-left: 1%;
+    border-top: 1px !important; 
+    border-right: 1px !important; 
+    border-bottom: 3px !important; 
+    border-left: 1px  !important; 
+    border-radius: 4px !important;
+    padding: 2px 20px !important; 
+    
+}
+
+#empty_black{
+    background-color: #333;
+}
+
+.searching-text {
+    display: none;
+    font-size: 25px;
+    color: black;
+    padding-left: 3px;
+  }
+
+.dots span {
+    animation: blink 1.2s infinite;
+    animation-delay: calc(0.3s * var(--i));
+    font-weight: bold;
+    color: black;
+  }
+
+  @keyframes blink {
+    0%, 20%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+.suggested {
+    width: 100%; /* Makes the table take the full width */
+    border-collapse: collapse; /* Merges borders */
+    margin-top: 10px; /* Adds space above the table */
+}
+
+.suggested th, .suggested td {
+    border: 1px solid black; /* Adds borders to table cells */
+    padding: 8px; /* Adds padding to table cells */
+    text-align: left; /* Aligns text to the left */
+}
+
+.suggested th {
+    background-color: lightblue; /* Light grey background for header */
+}
+
+.suggested tr:hover {
+    background-color: lightblue; /* Light grey background on hover */
+}

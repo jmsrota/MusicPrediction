@@ -41,10 +41,9 @@ Author: James Rota
 
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
-import Functions
 import pandas as pd
 import numpy as np 
-import re
+
 
 
 #test Functions:

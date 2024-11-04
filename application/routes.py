@@ -1,7 +1,8 @@
-from application import app
-from flask import render_template, request
+from flask import render_template, request, Flask
 import requests
-from .MusicPrediction import music_recommender
+from MusicPrediction import music_recommender
+
+app = Flask(__name__)
 
 @app.route('/')
 @app.route('/Music_Suggestions')
