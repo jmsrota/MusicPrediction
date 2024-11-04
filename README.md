@@ -40,13 +40,10 @@ and uses cosine similarity to recommend songs based on user input.
 
 ### Example code:
 
-//Sample user input
 user_input = ["song name by artist in genre"]
 
-//Call the recommender function
 recommendations = music_recommender(user_input)
 
-//Display results
 print(recommendations)
 
 ## License
